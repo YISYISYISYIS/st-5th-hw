@@ -10,9 +10,6 @@ const textsSlice = createSlice({
   name: "texts",
   initialState,
   reducers: {
-    setTexts: (prevState, action) => {
-      prevState.texts = action.payload;
-    },
     addText: (prevState, action) => {
       prevState.texts.push(action.payload);
       localStorage.setItem("texts", JSON.stringify(prevState.texts));
